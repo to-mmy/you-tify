@@ -5,18 +5,16 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
-class ApiKeys(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    spotifyPlaylistUrl= db.Column(db.String(200), nullable=False)
-    youtubeClientId = db.Column(db.String(200), nullable=False)
-    youtubeClientSecret = db.Column(db.String(200), nullable=False)
-
-    def __repr__(self):
-        return '<ApiKeys(playlistId=%s, spotifyClientId=%s, youtubeApiKey=%s, youtubeClientId=%s)>' % (self.playlistId, self.spotifyClientId, self.youtubeApiKey, self.youtubeClientId)
+class ApiKeys(object):
+    def __init__(self, spotifyPlaylistUrl, youtubeClientId, youtubeClientSecret):
+        self.spotifyPlaylistUrl = spotifyPlaylistUrl
+        self.youtubeClientId = youtubeClientId
+        self.youtubeClientSecret = youtubeClientSecret
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     error = None
+    completed = None
     if request.method == "POST":
         spotify_playlist_url = request.form.get('spotify_playlist_url', False)
         youtube_client_id = request.form.get('youtubeClientId', False)
@@ -24,13 +22,13 @@ def home():
 
         new_api_keys = ApiKeys(spotifyPlaylistUrl=spotify_playlist_url, youtubeClientId=youtube_client_id, youtubeClientSecret=youtube_client_secret)
         try:
-            db.session.add(new_api_keys)
-            db.session.commit()
-            return redirect('/')
+            completed = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # backend_function(new_api_keys)
+            return render_template('index.html', error = error, completed = completed)
         except:
-            return "There was an issue creating your playlist."
+            error = "There was an issue creating your playlist."
+            return render_template('index.html', error = error, completed = completed)
     else:
-        return render_template('index.html', error = error)
+        return render_template('index.html', error = error, completed = completed)
 
 # @app.route('/new', methods=['GET', 'POST'])
 # def login():

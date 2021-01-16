@@ -12,8 +12,18 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="position-relative my-5">
         <h1 style="text-align: center">You-tify a Playlist!</h1>
+    </div>
+    {% if completed %}
+    <div class="container">
+        <h2 style="color: lightcoral;">Success!</h2>
+        See your new You-tified playlist <a href="{{ completed }}">here</a>!
+        <br><br>
+    </div>
+    
+    {% endif %}
+    <div class="container">
         <br>
         <form action="/" method="POST">
             Spotify Url: <input type="text"  name="spotifyPlaylistUrl" value="">
@@ -22,7 +32,7 @@
             <p><br></p>
             YouTube Client Secret: <input type="text"  name="youtubeClientSecret" value="">
             <p><br></p>
-            <input class="btn btn-default" type="submit" value="Get YouTube Playlist">
+            <input class="btn btn-primary" type="submit" value="Get YouTube Playlist">
         </form>
         {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
