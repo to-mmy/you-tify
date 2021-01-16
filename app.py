@@ -7,10 +7,7 @@ db = SQLAlchemy(app)
 
 class ApiKeys(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    spotifyPlaylistId = db.Column(db.String(200), nullable=False)
-    spotifyClientId = db.Column(db.String(200), nullable=False)
-    spotifyClientSecret = db.Column(db.String(200), nullable=False)
-    youtubeApiKey = db.Column(db.String(200), nullable=False)
+    spotifyPlaylistUrl= db.Column(db.String(200), nullable=False)
     youtubeClientId = db.Column(db.String(200), nullable=False)
     youtubeClientSecret = db.Column(db.String(200), nullable=False)
 
@@ -21,14 +18,11 @@ class ApiKeys(db.Model):
 def home():
     error = None
     if request.method == "POST":
-        spotify_playlist_id = request.form.get('spotifyPlaylistId', False)
-        spotify_client_id = request.form.get('spotifyClientId', False)
-        spotify_client_secret = request.form.get('spotifyClientSecret', False)
-        youtube_api_key = request.form.get('youtubeApiKey', False)
+        spotify_playlist_url = request.form.get('spotify_playlist_url', False)
         youtube_client_id = request.form.get('youtubeClientId', False)
         youtube_client_secret = request.form.get('youtubeClientSecret', False)
 
-        new_api_keys = ApiKeys(spotifyPlaylistId=spotify_playlist_id, spotifyClientId=spotify_client_id, spotifyClientSecret=spotify_client_secret, youtubeApiKey=youtube_api_key, youtubeClientId=youtube_client_id, youtubeClientSecret=youtube_client_secret)
+        new_api_keys = ApiKeys(spotifyPlaylistUrl=spotify_playlist_url, youtubeClientId=youtube_client_id, youtubeClientSecret=youtube_client_secret)
         try:
             db.session.add(new_api_keys)
             db.session.commit()
