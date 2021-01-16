@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>You-tify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center">You-tify a Playlist!</h1>
+        <br>
+        <form action="/" method="POST">
+            Spotify Url: <input type="text"  name="spotifyPlaylistUrl" value="">
+            <p><br></p>
+            YouTube Client ID: <input type="text"  name="youtubeClientId" value="">
+            <p><br></p>
+            YouTube Client Secret: <input type="text"  name="youtubeClientSecret" value="">
+            <p><br></p>
+            <input class="btn btn-default" type="submit" value="Get YouTube Playlist">
+        </form>
+        {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
+    </div>
+</body>
+
+</html>
