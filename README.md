@@ -16,7 +16,7 @@ You-tify takes in a public Spotify URL and, after giving the program access to y
 
 Dylan and Jennifer handled most of the backend.
 
-Thomas and Vince worked on the frontend.
+Thomas and Vince worked on the frontend. The frontend consists of the Flask framework in Python, with CSS from Bootstrap.
 
 ## Challenges we ran into
 
@@ -24,7 +24,7 @@ Dylan: I have never worked with any Web APIs before, so it was an interesting ch
 
 Jennifer:
 
-Thomas:
+Thomas: It was my first time using Flask, but I found the actual framework pretty simple to get used to. Not so simple, however, was getting it to work. I had no experience with pip or dealing with large numbers of Python dependencies, and the boilerplate code we started from ended up being rather excessively complex for our uses. It was a good exercise in adapting to a new coding environment.
 
 Vince: I got stuck on the very beginning for 3 hours trying to install flask.  
 
@@ -34,7 +34,7 @@ Dylan: After struggling to figure out how to successfully authorize myself after
 
 Jennifer:
 
-Thomas:
+Thomas: To be hhonest, when Dylan told me his idea I was a little skeptical that we four hackathon beginners could pull it off. It was immensely satisfying to finally get the app working and fulfilling the original idea after struggling with it for a great deal.
 
 Vince: Im proud that I went from knowing nothing about flask at the beginning of the hackathon to knowing a little more about flask at the end.
 
@@ -44,7 +44,7 @@ Dylan:
 
 Jennifer:
 
-Thomas:
+Thomas: One big thing I learned was to trust in my team members. I tend to want to go over every line and understand everything, but there was no time to do that here. I was blown away by how well we worked together, considering I had never met any of them before. I'd love to work with them again!
 
 Vince: The most valuable thing I learned from this Hackathon was how to use git.  I can do the basics now!  (Thanks Tommy)
 
