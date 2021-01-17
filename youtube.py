@@ -10,14 +10,14 @@ from google.auth.transport.requests import Request
 # The output of this function is a URL of the newly created YouTube playlist
 
 # For example:
-# playlist = [{"song_name": "Can I Call You Tonight", "artists": "Dayglow"}]
-# playlist_name = "Example Playlist"
-# client_id = "540128384418-crf1ir3g8dr6ocq4do19f6j6c4ekgdb2.apps.googleusercontent.com"
-# client_secret = "izXecB2_zIPOJWi_kErlUiNx"
+playlist = [{"song_name": "Can I Call You Tonight", "artists": "Dayglow"}]
+playlist_name = "Example Playlist"
+
+client_id = "540128384418-crf1ir3g8dr6ocq4do19f6j6c4ekgdb2.apps.googleusercontent.com"
+client_secret = "izXecB2_zIPOJWi_kErlUiNx"
 
 def call_youtube(client_id, client_secret, playlist):
-
-    # Turn the inputs into a clients_secret_file
+    # Turn the inputs into a clients_secret_file dictionary to obtain credentials
     client_secrets_file = {
         "web":{ 
             "client_id":client_id,
@@ -29,8 +29,6 @@ def call_youtube(client_id, client_secret, playlist):
             }
         }
 
-    # client_secrets_file = json.dumps(client_id_and_secrets)
-
     scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
     # Create a flow object. Note: this takes in input as a string?
@@ -40,18 +38,6 @@ def call_youtube(client_id, client_secret, playlist):
     credentials = flow.run_local_server(port=8080, prompt="consent")
 
     youtube = build("youtube", "v3", credentials=credentials)
-
-    """request = youtube.playlists().list(
-        part="snippet,contentDetails",
-        channelId=None,
-        maxResults=25,
-        mine=True
-    )
-
-    response = request.execute()
-
-    print(response)
-    print(response["pageInfo"]["totalResults"])"""
 
     # Create a private playlist through an API call
     create_playlist = youtube.playlists().insert(
@@ -106,3 +92,5 @@ def call_youtube(client_id, client_secret, playlist):
     playlist_url = "https://www.youtube.com/playlist?list={playlist_id}"
 
     return playlist_url
+
+url = call_youtube(client_id, client_secret, playlist)
