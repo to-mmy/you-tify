@@ -26,7 +26,7 @@ Jennifer:
 
 Thomas:
 
-Vince:
+Vince: I got stuck on the very beginning for 3 hours trying to install flask.  
 
 ## Accomplishments that we're proud of
 
@@ -36,7 +36,7 @@ Jennifer:
 
 Thomas:
 
-Vince:
+Vince: Im proud that I went from knowing nothing about flask at the beginning of the hackathon to knowing a little more about flask at the end.
 
 ## What we each learned
 
@@ -46,7 +46,7 @@ Jennifer:
 
 Thomas:
 
-Vince:
+Vince: The most valuable thing I learned from this Hackathon was how to use git hub.  I can do the basics now!  (Thanks Tommy)
 
 ## What's next for You-tify?
 
