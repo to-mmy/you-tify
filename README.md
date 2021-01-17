@@ -1,4 +1,4 @@
-### You-tify
+## Introducing, You-tify!
 
 ## Inspiration
 
@@ -16,10 +16,28 @@ Dylan and Jennifer handled the backend.
 
 Thomas and Vince worked on the frontend.
 
-## Challenges I ran into
+## Challenges we ran into
 
-## Accomplishments that I'm proud of
+Dylan:
 
-## What I learned
+Jennifer:
 
-## What's next for You-tify
+Thomas:
+
+Vince:
+
+## Accomplishments that we're proud of
+
+## What we each learned
+
+Dylan:
+
+Jennifer:
+
+Thomas:
+
+Vince:
+
+## What's next for You-tify?
+
+
