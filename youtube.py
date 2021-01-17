@@ -1,5 +1,6 @@
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
+import googleapiclient.errors
 
 # Limitations: User must create a channel. This can be accomplished by making a public playlist.
 
@@ -18,6 +19,7 @@ def call_youtube(playlist_tuple):
     # Start the authentication with the app
     client_id = "540128384418-crf1ir3g8dr6ocq4do19f6j6c4ekgdb2.apps.googleusercontent.com"
     client_secret = "izXecB2_zIPOJWi_kErlUiNx"
+
     # Turn the inputs into a clients_secret_file dictionary to obtain credentials
     client_secrets_file = {
         "web":{ 
@@ -39,7 +41,7 @@ def call_youtube(playlist_tuple):
     credentials = flow.run_local_server(port=8080, prompt="consent")
     
     youtube = build("youtube", "v3", credentials=credentials)
-    
+
     # Create a private playlist through an API call
     create_playlist = youtube.playlists().insert(
             part="snippet,status",
@@ -94,3 +96,4 @@ def call_youtube(playlist_tuple):
     
     return playlist_url
 
+# url = call_youtube(playlist_tuple)
