@@ -12,7 +12,15 @@ def get_playlist_tracks(playlist_url):
 
     # extract playlist id from playlist url
     m = re.search('playlist/(.+?)\?', playlist_url)
-    playlist_id = m.group(1)
+    playlist_id = ""
+    if(m):
+        playlist_id = m.group(1)
+    else: #id must be at the end of the url
+        for c in reversed(playlist_url):
+            if c == '/':
+                break
+            playlist_id += c
+        playlist_id = playlist_id[::-1]
 
     # playlist name and items
     name = sp.playlist(playlist_id, fields='name')
