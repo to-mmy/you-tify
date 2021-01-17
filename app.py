@@ -6,10 +6,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
 class ApiKeys(object):
-    def __init__(self, spotifyPlaylistUrl, youtubeClientId, youtubeClientSecret):
+    def __init__(self, spotifyPlaylistUrl):
         self.spotifyPlaylistUrl = spotifyPlaylistUrl
-        self.youtubeClientId = youtubeClientId
-        self.youtubeClientSecret = youtubeClientSecret
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -17,10 +15,7 @@ def home():
     completed = None
     if request.method == "POST":
         spotify_playlist_url = request.form.get('spotify_playlist_url', False)
-        youtube_client_id = request.form.get('youtubeClientId', False)
-        youtube_client_secret = request.form.get('youtubeClientSecret', False)
-
-        new_api_keys = ApiKeys(spotifyPlaylistUrl=spotify_playlist_url, youtubeClientId=youtube_client_id, youtubeClientSecret=youtube_client_secret)
+        new_api_keys = ApiKeys(spotifyPlaylistUrl=spotify_playlist_url)
         try:
             completed = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # backend_function(new_api_keys)
             return render_template('index.html', error = error, completed = completed)
