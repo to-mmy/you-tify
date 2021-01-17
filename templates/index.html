@@ -10,7 +10,7 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <style>
         h1 {text-align: center;}
-        h2 {text-align: center;  position: relative; left: 25px;}
+        h2 {text-align: center;  position: relative; right: 15px;}
         body {text-align: center;}
     </style>
 </head>
@@ -19,7 +19,7 @@
         <div class="position-relative my-5">
             <h1 style="text-align: center; font-weight: bold;">You-tify a Playlist!</h1>
         </div>
-        <h2><img src="/static/logo.png" alt="logo" width="500" height="256"></h2>
+        <h2><img src="/static/logo.png" alt="logo" width="440" height="282"></h2>
 
         {% if completed %}
         <div class="container">
@@ -32,7 +32,7 @@
         <div class="container">
             <br>
             <form style="font-weight: bold" action="/" method="POST">
-                Spotify Playlist Link: &nbsp; <input style="width: 300px;"type="text"  name="spotifyPlaylistUrl" value="" > &nbsp;
+                Spotify Playlist Link: &nbsp; <input style="width: 400px;"type="text"  name="spotifyPlaylistUrl" value="" > &nbsp;
                 <input class="btn btn-primary" type="submit" value="Get YouTube Playlist">
             </form>
             {% if error %}
@@ -40,13 +40,13 @@
             {% endif %}
         </div>
         <div class = "container">
-            <br>
-            <br>
+            <br><br><br>
             <p style="font-size: 21px; font-weight: bold; ">Before you start:</p>
                 <ul style = "text-align: left; margin-left: 15%; margin-right: 15%;">
                     <li>Make sure that your Spotify playlist is public and that your Youtube account has a channel to transfer your playlist to.</li>
                     <li>You can create a YouTube channel by making a public/unlisted playlist.</li>
                 </ul>
+            <br>
             <p style = "font-size: 21px; font-weight: bold;">How to use You-tify:</p>
             <p>
                 <ol style="text-align: left; margin-left: 15%; margin-right: 15%;">
@@ -59,7 +59,7 @@
             </p>
         </div>
     </div>
-    <br><br><br>
+    <br><br>
 </body>
 
 </html>
