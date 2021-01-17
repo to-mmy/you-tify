@@ -92,7 +92,7 @@ def call_youtube(playlist_tuple):
         
         new_playlist_item = add_playlist_item.execute()
     
-    playlist_url = "https://www.youtube.com/playlist?list={playlist_id}"
+    playlist_url = f"https://www.youtube.com/playlist?list={playlist_id}"
     
     return playlist_url
 
