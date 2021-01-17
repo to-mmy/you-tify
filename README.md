@@ -46,7 +46,7 @@ Jennifer:
 
 Thomas:
 
-Vince: The most valuable thing I learned from this Hackathon was how to use git hub.  I can do the basics now!  (Thanks Tommy)
+Vince: The most valuable thing I learned from this Hackathon was how to use git.  I can do the basics now!  (Thanks Tommy)
 
 ## What's next for You-tify?
 
