@@ -17,9 +17,9 @@
 
 <body>
         <div class="position-relative my-5">
-            <h1 style="text-align: center">You-tify a Playlist!</h1>
+            <h1 style="text-align: center; font-weight: bold;">You-tify a Playlist!</h1>
         </div>
-        <h2><img src="/static/logo.jpg" alt="logo" width="500" height="256"></h2>
+        <h2><img src="/static/logo.png" alt="logo" width="500" height="256"></h2>
 
         {% if completed %}
         <div class="container">
@@ -31,10 +31,8 @@
         {% endif %}
         <div class="container">
             <br>
-            <form action="/" method="POST">
-                Spotify Playlist Link: <input type="text"  name="spotifyPlaylistUrl" value="" >
-                <p><br></p>
-                <p><br></p>
+            <form style="font-weight: bold" action="/" method="POST">
+                Spotify Playlist Link: &nbsp; <input style="width: 300px;"type="text"  name="spotifyPlaylistUrl" value="" > &nbsp;
                 <input class="btn btn-primary" type="submit" value="Get YouTube Playlist">
             </form>
             {% if error %}
@@ -42,14 +40,21 @@
             {% endif %}
         </div>
         <div class = "container">
-            <p style = "font-size: 21px;">How to use You-tify</p>
-            <p style = "font-size: 21px;">
-                <ol>
-                    <li>Ensure that your Spotify playlist is public and that the YouTube account that you want to transfer a playlist to has created a channel. Channel creation can be done by creating a public/unlisted playlist.</li>
-                    <li>Copy and paste the Spotify URL to the playlist</li>
-                    <li>Hit the button to convert your playlist!</li>
-                    <li>Log into your Google/YouTube account and give authorization to You-tify</li>
-                    <li>Enjoy listening!</li>
+            <br>
+            <br>
+            <p style="font-size: 21px; font-weight: bold; ">Before you start:</p>
+                <ul style = "text-align: left; margin-left: 15%; margin-right: 15%;">
+                    <li>Make sure that your Spotify playlist is public and that your Youtube account has a channel to transfer your playlist to.</li>
+                    <li>You can create a YouTube channel by making a public/unlisted playlist.</li>
+                </ul>
+            <p style = "font-size: 21px; font-weight: bold;">How to use You-tify:</p>
+            <p>
+                <ol style="text-align: left; margin-left: 15%; margin-right: 15%;">
+                    <li style="font-weight: bold;"><div style="font-weight: normal;">Open the Spotify playlist you want to you-tify, click the circle with the ellipses > "Share" > "Copy Playlist Link"</div></li>
+                    <li style="font-weight: bold;"><div style="font-weight: normal;">Paste the playlist link into the search box</div></li>
+                    <li style="font-weight: bold;"><div style="font-weight: normal;">Hit the button to convert your playlist</div></li>
+                    <li style="font-weight: bold;"><div style="font-weight: normal;">Log into your Google/YouTube account and give authorization to You-tify</div></li>
+                    <li style="font-weight: bold;"><div style="font-weight: normal;">Enjoy listening!</div></li>
                 </ol>
             </p>
         </div>
