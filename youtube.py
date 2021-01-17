@@ -38,7 +38,7 @@ def call_youtube(playlist_tuple):
     flow = InstalledAppFlow.from_client_config(client_secrets_file, scopes)
     
     # After running the code, the user will be prompted to give authorization to the application
-    credentials = flow.run_local_server(port=8080)
+    credentials = flow.run_local_server(port=8080, prompt="consent")
     
     youtube = build("youtube", "v3", credentials=credentials)
 
