@@ -13,8 +13,8 @@ import googleapiclient.errors
 
 def call_youtube(playlist_tuple):
     
-    playlist_name = playlist_tuple[0]
-    playlist = playlist_tuple[1]["name"]
+    playlist_name = playlist_tuple[0]["name"]
+    playlist = playlist_tuple[1]
     
     # Start the authentication with the app
     client_id = "540128384418-crf1ir3g8dr6ocq4do19f6j6c4ekgdb2.apps.googleusercontent.com"
