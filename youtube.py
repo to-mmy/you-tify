@@ -10,13 +10,17 @@ from google.auth.transport.requests import Request
 # The output of this function is a URL of the newly created YouTube playlist
 
 # For example:
-playlist = [{"song_name": "Can I Call You Tonight", "artists": "Dayglow"}]
-playlist_name = "Example Playlist"
+# playlist_tuple = ({'name': 'SB Hacks Test Playlist'}, [{'song_name': 'Away from Home', 'artists': 'Jhove Bert'}, {'song_name': 'Letting Go', 'artists': 'H E R B Kendall Miles'}, {'song_name': 'another perspective', 'artists': 'Idealism'}, {'song_name': 'Cereal Killa', 'artists': 'Blue Wednesday'}])
 
-client_id = "540128384418-crf1ir3g8dr6ocq4do19f6j6c4ekgdb2.apps.googleusercontent.com"
-client_secret = "izXecB2_zIPOJWi_kErlUiNx"
 
-def call_youtube(client_id, client_secret, playlist):
+def call_youtube(playlist_tuple):
+    
+    playlist_name = playlist_tuple[0]
+    playlist = playlist_tuple[1]
+    
+    # Start the authentication with the app
+    client_id = "540128384418-crf1ir3g8dr6ocq4do19f6j6c4ekgdb2.apps.googleusercontent.com"
+    client_secret = "izXecB2_zIPOJWi_kErlUiNx"
     # Turn the inputs into a clients_secret_file dictionary to obtain credentials
     client_secrets_file = {
         "web":{ 
@@ -28,17 +32,17 @@ def call_youtube(client_id, client_secret, playlist):
             "client_secret":client_secret
             }
         }
-
+    
     scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
-
-    # Create a flow object. Note: this takes in input as a string?
+    
+    # Create a flow object
     flow = InstalledAppFlow.from_client_config(client_secrets_file, scopes)
-
+    
     # After running the code, the user will be prompted to give authorization to the application
     credentials = flow.run_local_server(port=8080, prompt="consent")
-
+    
     youtube = build("youtube", "v3", credentials=credentials)
-
+    
     # Create a private playlist through an API call
     create_playlist = youtube.playlists().insert(
             part="snippet,status",
@@ -52,28 +56,28 @@ def call_youtube(client_id, client_secret, playlist):
                 }
             }
         )
-
+    
     new_playlist = create_playlist.execute()
-
+    
     playlist_id = new_playlist["id"]
-
+    
     for song in playlist:
-
+        
         song_name = song["song_name"]
         artist = song["artists"]
-
+        
         # Key words for the search
         keywords = song_name + " " + artist + " audio"
-
+        
         searched_list = youtube.search().list(
                 part="snippet",
                 maxResults=1,
                 q=keywords
             )
         searched_song = searched_list.execute()
-
+        
         searched_id = searched_song["items"][0]["id"]["videoId"]
-
+        
         add_playlist_item = youtube.playlistItems().insert(
                 part="snippet",
                 body={
@@ -86,11 +90,10 @@ def call_youtube(client_id, client_secret, playlist):
                     }
                 }
             )
-
+        
         new_playlist_item = add_playlist_item.execute()
-
+    
     playlist_url = "https://www.youtube.com/playlist?list={playlist_id}"
-
+    
     return playlist_url
 
-url = call_youtube(client_id, client_secret, playlist)
