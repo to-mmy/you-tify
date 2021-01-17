@@ -51,7 +51,7 @@ def call_youtube(playlist_tuple):
                 "defaultLanguage": "en"
                 },
                 "status": {
-                "privacyStatus": "private"
+                "privacyStatus": "unlisted"
                 }
             }
         )
