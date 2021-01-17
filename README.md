@@ -1,5 +1,7 @@
 ## Introducing, You-tify!
 
+This was a submission for the SB Hacks VII Hackathon. Our Devpost can be found here. (link to come later)
+
 ## Inspiration
 
 Dylan recently started learning Python a month ago and, while coding, he often turned on music on Spotify. Recently, he has been listening to some game soundtracks. Unfortunately, Spotify's selection of game music is sorely lacking! He created a YouTube playlist and found a far better selection of more YouTube-exclusive songs and remixes. However, he wanted to also import his previous Spotify playlist onto that same platform.
@@ -27,6 +29,14 @@ Thomas:
 Vince:
 
 ## Accomplishments that we're proud of
+
+Dylan:
+
+Jennifer:
+
+Thomas:
+
+Vince:
 
 ## What we each learned
 
