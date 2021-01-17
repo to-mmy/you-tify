@@ -22,7 +22,7 @@ Thomas and Vince worked on the frontend. The frontend consists of the Flask fram
 
 Dylan: I have never worked with any Web APIs before, so it was an interesting challenge familiarizing myself with the YouTube data documentation in such a limited time. Additionally, figuring out OAuth 2 made this far more difficult as well. I also used this hackathon as an opportunity to learn VS Code (I've only used PyCharm for Python) and introducing myself to Git/GitHub to collaborate with a team on future projects.
 
-Jennifer: I have never worked with Web APIs and Git/GitHub before either, so learning how to use them was a good challenge. After creating an app through the Spotify for Developers website, I did not want to immortalize the app credentials in my source code because I figured our client secret should remain secret, but setting environment variables in my terminal did not seem to work so I ended up passing them through the Client Credential Flow directly. Also, the response body of the playlist_item() request contains an array of track objects wrapped in a paging object in JSON format. Figuring out how to make this into a readable list of dictionaries in the data structure Dylan wanted was a good exercise.
+Jennifer: I have never worked with Web APIs and Git/GitHub before either, so learning how to use them was a good challenge. Also, the response body of the playlist_item() request contains an array of track objects wrapped in a paging object in JSON format. Figuring out how to make this into the desired list of dictionaries was a good exercise.
 
 Thomas: It was my first time using Flask, but I found the actual framework pretty simple to get used to. Not so simple, however, was getting it to work. I had no experience with pip or dealing with large numbers of Python dependencies, and the boilerplate code we started from ended up being rather excessively complex for our uses. It was a good exercise in adapting to a new coding environment.
 
@@ -40,13 +40,13 @@ Vince: I'm proud that I went from knowing nothing about flask at the beginning o
 
 ## What we each learned
 
-Dylan: I learned how to really deep dive into documentation of Web APIs, utilizing the basics of Git, and using VS code. Additonally, I've never developed an intense project and learned something this new in such a short amount of time.
+Dylan: I learned how to really deep dive into documentation of Web APIs, utilizing the basics of Git, and using VS code. PyCharm automatically initializes virtual environments for you, so learning how to create a virtual environment in VS code was amazing. Additionally, I've never developed an intense project and learned something this new in such a short amount of time.
 
-Jennifer: I learned about Spotipy, Spotify data documentation, nested dictionaries, git commands, the 're' module, and front/back-end development.
+Jennifer: I learned about Spotipy, Spotify data documentation, nested dictionaries, Git commands, and front/back-end development.
 
 Thomas: One big thing I learned was to trust in my team members. I tend to want to go over every line and understand everything, but there was no time to do that here. I was blown away by how well we worked together, considering I had never met any of them before. I'd love to work with them again!
 
-Vince: The most valuable thing I learned from this Hackathon was how to use git.  I can do the basics now!  (Thanks Tommy)
+Vince: The most valuable thing I learned from this hackathon was how to use Git.  I can do the basics now!  (Thanks Tommy)
 
 ## What's next for You-tify?
 
