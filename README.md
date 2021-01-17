@@ -10,7 +10,7 @@ But importing his large, 50+ song would be tedious! He also was interested in le
 
 ## What it does
 
-You-tify takes in a public Spotify URL and, after giving the program access to your account, creates a playlist of the same songs!
+You-tify takes in a public Spotify URL and, after giving the program access to your account, creates a playlist of the same songs! When you launch the Web App, it 
 
 ## How we built it
 
@@ -40,7 +40,7 @@ Vince: I'm proud that I went from knowing nothing about flask at the beginning o
 
 ## What we each learned
 
-Dylan: I learned how to really deep dive into documentation of Web APIs, utilizing the basics of Git, and using VS code.
+Dylan: I learned how to really deep dive into documentation of Web APIs, utilizing the basics of Git, and using VS code. Additonally, I've never developed an intense project and learned something this new in such a short amount of time.
 
 Jennifer: I learned about Spotipy, Spotify data documentation, nested dictionaries, git commands, the 're' module, and front/back-end development.
 
