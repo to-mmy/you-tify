@@ -16,29 +16,41 @@
 </head>
 
 <body>
-    <div class="position-relative my-5">
-        <h1 style="text-align: center">You-tify a Playlist!</h1>
-    </div>
-    <h2><img src="/static/logo.jpg" alt="logo" width="500" height="256"></h2>
-    {% if completed %}
-    <div class="container">
-        <h3 style="color: lightcoral;">Success!</h2>
-            See your new You-tified playlist <a href="{{ completed }}">here</a>!
-            <br><br>
-    </div>
+        <div class="position-relative my-5">
+            <h1 style="text-align: center">You-tify a Playlist!</h1>
+        </div>
+        <h2><img src="/static/logo.jpg" alt="logo" width="500" height="256"></h2>
+
+        {% if completed %}
+        <div class="container">
+            <h3 style="color: lightcoral;">Success!</h2>
+                See your new You-tified playlist <a href="{{ completed }}">here</a>!
+                <br><br>
+        </div>
     
-    {% endif %}
-    <div class="container">
-        <br>
-        <form action="/" method="POST">
-            Spotify Url: <input type="text"  name="spotifyPlaylistUrl" value="">
-            <p><br></p>
-            <p><br></p>
-            <input class="btn btn-primary" type="submit" value="Get YouTube Playlist">
-        </form>
-        {% if error %}
-        <p style="color: red;" class="error"><strong>Error:</strong> {{ error }}</p>
         {% endif %}
+        <div class="container">
+            <br>
+            <form action="/" method="POST">
+                Spotify Playlist Link: <input type="text"  name="spotifyPlaylistUrl" value="" >
+                <p><br></p>
+                <p><br></p>
+                <input class="btn btn-primary" type="submit" value="Get YouTube Playlist">
+            </form>
+            {% if error %}
+            <p style="color: red;" class="error"><strong>Error:</strong> {{ error }}</p>
+            {% endif %}
+        </div>
+        <div class = "container">
+            <p style = "font-size: 21px;">
+                <br>How to use You-tify:<br>
+                1. Ensure that your Spotify playlist is public and that the YouTube account that you want to transfer a playlist to has created a channel. Channel creation can be done by creating a public/unlisted playlist.
+                <br>2. Copy and paste the Spotify URL to the playlist
+                <br>3. Hit the button to convert your playlist!
+                <br>4. Log into your Google/YouTube account and give authorization to You-tify
+                <br>5. Enjoy listening!
+            </p>
+        </div>
     </div>
     <br><br><br>
 </body>

@@ -1,5 +1,7 @@
 ## Introducing, You-tify!
 
+This was a submission for the SB Hacks VII Hackathon. Our Devpost can be found here. (link to come later)
+
 ## Inspiration
 
 Dylan recently started learning Python a month ago and, while coding, he often turned on music on Spotify. Recently, he has been listening to some game soundtracks. Unfortunately, Spotify's selection of game music is sorely lacking! He created a YouTube playlist and found a far better selection of more YouTube-exclusive songs and remixes. However, he wanted to also import his previous Spotify playlist onto that same platform.
@@ -12,13 +14,13 @@ You-tify takes in a public Spotify URL and, after giving the program access to y
 
 ## How we built it
 
-Dylan and Jennifer handled the backend.
+Dylan and Jennifer handled most of the backend.
 
 Thomas and Vince worked on the frontend.
 
 ## Challenges we ran into
 
-Dylan:
+Dylan: I have never worked with any Web APIs before, so it was an interesting challenge familiarizing myself with the YouTube data documentation in such a limited time. Additionally, figuring out OAuth 2 made this far more difficult as well. I also used this hackathon as an opportunity to learn VS Code (I've only used PyCharm for Python) and introducing myself to Git/GitHub to collaborate with a team on future projects.
 
 Jennifer:
 
@@ -28,9 +30,17 @@ Vince:
 
 ## Accomplishments that we're proud of
 
+Dylan: After struggling to figure out how to successfully authorize myself after a couple hours of getting frustrating errors, making my first ever API call was incredibly satisfying. 
+
+Jennifer:
+
+Thomas:
+
+Vince:
+
 ## What we each learned
 
-Dylan:
+Dylan: 
 
 Jennifer:
 
