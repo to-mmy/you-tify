@@ -1,6 +1,6 @@
 ## Introducing, You-tify!
 
-This was a submission for the SB Hacks VII Hackathon. Our Devpost can be found here. (link to come later)
+This was a submission for the SB Hacks VII Hackathon. [Our Devpost can be found here](https://devpost.com/software/you-tify)
 
 ## Inspiration
 
