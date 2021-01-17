@@ -1,8 +1,5 @@
-import os
-import json
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
 
 # Limitations: User must create a channel. This can be accomplished by making a public playlist.
 
