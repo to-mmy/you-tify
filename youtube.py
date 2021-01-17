@@ -8,7 +8,7 @@ import googleapiclient.errors
 # The output of this function is a URL of the newly created YouTube playlist
 
 # For example:
-# playlist_tuple = ({'name': 'SB Hacks Test Playlist'}, [{'song_name': 'Away from Home', 'artists': 'Jhove Bert'}, {'song_name': 'Letting Go', 'artists': 'H E R B Kendall Miles'}, {'song_name': 'another perspective', 'artists': 'Idealism'}, {'song_name': 'Cereal Killa', 'artists': 'Blue Wednesday'}])
+playlist_tuple = ({'name': 'SB Hacks Test Playlist'}, [{'song_name': 'Away from Home', 'artists': 'Jhove Bert'}, {'song_name': 'Cereal Killa', 'artists': 'Blue Wednesday'}])
 
 
 def call_youtube(playlist_tuple):
@@ -19,7 +19,7 @@ def call_youtube(playlist_tuple):
     # Start the authentication with the app
     client_id = "540128384418-crf1ir3g8dr6ocq4do19f6j6c4ekgdb2.apps.googleusercontent.com"
     client_secret = "izXecB2_zIPOJWi_kErlUiNx"
-
+    
     # Turn the inputs into a clients_secret_file dictionary to obtain credentials
     client_secrets_file = {
         "web":{ 
@@ -96,4 +96,4 @@ def call_youtube(playlist_tuple):
     
     return playlist_url
 
-# url = call_youtube(playlist_tuple)
+url = call_youtube(playlist_tuple)
