@@ -9,9 +9,9 @@ You-tify converts your Spotify playlist into a YouTube playlist!
 1. [What it does](#whatitdoes)
 2. [Before you use this...](#before)
 3. [How do I use You-tify?](#howto)
-  * [Prerequisites](#prerequisites)
-  * [Directions](#directions)
-  * [...Why do I have to follow these directions?](#why)
+   * [Prerequisites](#prerequisites)
+   * [Directions](#directions)
+   * [...Why do I have to follow these directions?](#why)
 ---
 
 ## What it does <a name="whatitdoes"></a>
@@ -41,13 +41,13 @@ Please thoroughly read through this section.
 # Directions <a name="directions"></a>
 
 1. [Follow this link to obtain your Google client_id and client_secret](https://developers.google.com/adwords/api/docs/guides/authentication#webapp) and [follow the first step on this link to obtain your Spotify client_id and client_secret](https://developer.spotify.com/documentation/general/guides/app-settings/). Any email can be used to create these information
-  * Under the OAuth screen on the left on the Google website, add the email you'd like the playlist to be in as a "Test User"
+   * Under the OAuth screen on the left on the Google website, add the email you'd like the playlist to be in as a "Test User"
 2. Fork this Github repository
 3. Install the packages from the requirements.txt using pip
-  * (Recommended) Create a virtual environment for this project before installing the packages using pip
+   * (Recommended) Create a virtual environment for this project before installing the packages using pip
 4. Create a .env file in the same format as .env.example
-  * Replace all of the 1111111111111111 with the respective client_id and client_secret. Keep these personal to yourself.
-    * Note that these are NOT in quotes.
+   * Replace all of the 1111111111111111 with the respective client_id and client_secret. Keep these personal to yourself.
+     * Note that these are NOT in quotes.
 5. Run `app.py`. On Windows, it's `py app.py` in the terminal.
 6. Go to `http://localhost:5000/` on your favorite browser.
 7. Follow the directions on the web app below!
